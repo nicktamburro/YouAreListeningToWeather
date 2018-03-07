@@ -1,0 +1,513 @@
+button{
+  margin-left: 5px;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  margin-top: 0;
+}
+
+#weatherText{
+  color: white;
+  font-size: 10pt;
+}
+
+#noPad{
+  padding: 0;
+}
+
+
+
+.modal-backdrop {
+    z-index: -1;
+ 
+}
+
+.modal {
+
+   top: -20px;
+
+ 
+}
+
+.modalText {
+  color: white;
+}
+
+.modal-title{
+  color: white;
+}
+
+.modal-content{
+   background: rgba(230, 230, 260, 0.9);
+}
+
+
+.btn{
+  color: white;
+  background: rgba(230, 230, 260, 0.6);
+  border-color: rgba(230, 230, 260, 0.6);
+  border: none;
+  border-style: none;
+  outline: none;
+  height: 30px;
+  font-size: 100%;
+}
+
+.btn:hover{
+  background: rgba(200, 200, 260, 0.65);
+  outline: none;
+}
+
+.btn:focus,.btn:active {
+   outline: none !important;
+   box-shadow: none;
+}
+
+#results{
+  max-height: 100px;
+
+}
+
+img {
+  height: 30%;
+  width: 30%;
+  max-width: 30%;
+  margin-left: 0;
+}
+
+.temp{
+  max-width: 20%;
+  height: 10%;
+  padding-right: 0;  
+}
+
+.city{
+  padding-left: 0;
+  width: 20%;
+}
+
+#tempRow{
+  max-height: auto;
+  height: 20%;
+}
+
+#video-background {
+  margin-top: 0;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    z-index: -100;
+    min-height: 100%;
+    min-width: 100%;
+    background-position: center;
+}
+
+.fa {
+    color: blue;
+}
+
+.mainText{
+  color: black;
+  text-align: center;
+}
+
+#player-col{
+  max-width: 92%;
+}
+
+nav{
+  margin-bottom: 10%;
+}
+
+#mixRow{
+  margin-left: 0;
+  padding: 0;
+  margin-top: 8%;
+  height: 60px;
+}
+
+#mixCol{
+  padding:0;
+  margin-left: 0.5%;
+  margin-top: 1.5%;
+  height: 60px;
+}
+
+#mix-display{
+  padding: 0;
+  width: 100%;
+  display: inline-block;
+}
+
+#skipButton{
+  background-color: #333;
+  border-color: #101418;
+  border: 1px;
+   font-family: Open Sans,sans-serif;
+   font-size: 100%;
+  color: #d1d1d1;
+  width: 60px;
+  height: 60px;
+  font-size: 15px;
+  padding: 0;
+  margin-left: 1px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  }
+
+
+.container {
+  margin: 0 auto;
+  padding: 40px;
+  width: 80%;
+}
+
+.navbar {
+  background: rgba(260, 260, 260, 0.6);
+  color: white;
+  z-index: 0;
+  padding-bottom: 10px;
+}
+
+.wordColor{
+  color: rgba(260, 260, 260, 0.6);
+}
+
+
+form {
+  margin-top: 10px;
+  height: 100%;
+  margin-left: 0;
+}
+
+#location {
+  width: 30%;
+  height: 25px;
+  font-size: 100%;
+}
+
+#enterLocation{
+  height: 150%;
+}
+
+h1, .mainText{
+  margin-top: 0;
+  margin-left: 0;
+  font-size: 250%;
+  font-family: 'Cabin', sans-serif;
+  margin-bottom: 1%;
+}
+
+h2 {
+  margin-top: 1%;
+}
+
+.panel{
+  background: rgba(260, 260, 260, 0.2);
+}
+
+#navTitle{
+  margin-left: 0;
+}
+
+.dropdown-toggle, .dropdown-menu { width: 300px }
+.btn-group img { margin-right: 10px }
+.dropdown-toggle { padding-right: 50px }
+.dropdown-toggle .glyphicon { margin-left: 20px; margin-right: -40px }
+.dropdown-menu>li>a:hover { background: #f1f9fd } /* $search-blue */
+.dropdown-header { background: #ccc; font-size: 14px; font-weight: 700; 
+  padding-top: 5px; padding-bottom: 5px; margin-top: 10px; margin-bottom: 5px }
+
+  /* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+#mixRow{
+  margin-left: 0;
+  padding: 0;
+  margin-top: 24%;
+  height: 60px;
+}
+
+h1, .mainText{
+  margin-top: 0;
+  margin-left: 0;
+  font-size: 450%;
+  font-family: 'Cabin', sans-serif;
+  margin-bottom: 1%;
+}
+
+input {
+  height: 500%;
+}
+
+.btn{
+  color: white;
+  background: rgba(230, 230, 260, 0.6);
+  border-color: rgba(230, 230, 260, 0.6);
+  border: none;
+  border-style: none;
+  outline: none;
+  height: 40px;
+  font-size: 120%;
+}
+
+
+#location {
+  width: 30%;
+  height: 25px;
+  font-size: 100%;
+}
+
+#weatherText{
+  color: white;
+  font-size: 10pt;
+}
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) and (max-device-width : 812px){
+/* Styles */
+#mixRow{
+  margin-left: 0;
+  padding: 0;
+  margin-top: 24%;
+  height: 60px;
+}
+
+h1, .mainText{
+  margin-top: 0;
+  margin-left: 0;
+  font-size: 450%;
+  font-family: 'Cabin', sans-serif;
+  margin-bottom: 1%;
+}
+
+.btn{
+  color: white;
+  background: rgba(230, 230, 260, 0.6);
+  border-color: rgba(230, 230, 260, 0.6);
+  border: none;
+  border-style: none;
+  outline: none;
+  height: 40px;
+  font-size: 120%;
+}
+
+h2{
+  font-size: 250%;
+}
+
+#location {
+  width: 30%;
+  height: 40px;
+  font-size: 120%;
+}
+
+#weatherText{
+  color: white;
+  font-size: 10pt;
+}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+
+}
+
+/*Iphone X landscape*/
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) 
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : landscape) { 
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+#mixRow{
+  margin-left: 0;
+  padding: 0;
+  margin-top: 11%;
+  height: 60px;
+}
+
+h1, .mainText{
+  margin-top: 0;
+  margin-left: 0;
+  font-size: 350%;
+  font-family: 'Cabin', sans-serif;
+  margin-bottom: 1%;
+}
+
+#weatherText{
+  color: white;
+  font-size: 10pt;
+}
+
+#location {
+  width: 30%;
+  height: 25px;
+  font-size: 100%;
+}
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+#mixRow{
+  margin-left: 0;
+  padding: 0;
+  margin-top: 22%;
+  height: 60px;
+}
+
+h1, .mainText{
+  margin-top: 0;
+  margin-left: 0;
+  font-size: 450%;
+  font-family: 'Cabin', sans-serif;
+  margin-bottom: 1%;
+}
+
+#location {
+  width: 30%;
+  height: 25px;
+  font-size: 100%;
+}
+
+#weatherText{
+  color: white;
+  font-size: 10pt;
+}
+}
+
+/* iPad PRo ------- */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+
+    #mixRow{
+  margin-left: 0;
+  padding: 0;
+  margin-top: 12%;
+  height: 60px;
+}
+
+h1, .mainText{
+  margin-top: 0;
+  margin-left: 0;
+  font-size: 450%;
+  font-family: 'Cabin', sans-serif;
+  margin-bottom: 1%;
+}
+#location {
+  width: 30%;
+  height: 25px;
+  font-size: 100%;
+}
+
+#weatherText{
+  color: white;
+  font-size: 10pt;
+}
+}
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+/* iPhone 5 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* iPhone 6 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* iPhone 6+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+
+}
+
+/* Samsung Galaxy S3 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* Samsung Galaxy S4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+/* Samsung Galaxy S5 ----------- */
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}

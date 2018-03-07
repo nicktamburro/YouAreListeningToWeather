@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+  <script src="https://widget.mixcloud.com/media/js/widgetApi.js" type="text/javascript"></script>
+  
+  
+<title>you are listening to weather</title>
+</head>
+
+<body>
+  <nav class="nav fixed-top navbar navbar-default">
+    <div class="container-fluid" id="navTitle">
+
+       <div class="row">
+
+          <div class="col-lg ml-auto" id="col1">
+
+            <div class="navbar-header">
+              <h1><span class="wordColor">you</span>are<span class="wordColor">listening</span>to<span class="wordColor">weather</span></h1>
+            </div>
+
+            <!-- Button trigger modal -->
+    
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!--div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" >you are listening to weather!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div-->
+      <div class="modal-body">
+        <h5 class="modalText">Give us a location, and we'll tell you what 
+        the weather's like there. Then we'll give you a music mix that fits the vibe of that weather. <br><br>If this mix isn't quite doing it for you (we realize this is pretty subjective), just skip to another mix!</h5>
+      </div>
+      <!--div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div-->
+    </div>
+  </div>
+</div>
+         
+            <div class="col">
+              <div class="row"> 
+                <div class="col" id="noPad">
+                  <form class="form-inline">
+                    <label class="sr-only" id="enterLocation" for="inlineFormInput search"></label>
+                    <input type="text" class="form-control mb-2 ml-sm-0 mb-sm-0" id="location" placeholder="where are you?">
+                    <button type="submit" class="btn" id="input-location">search</button>
+                    <button type="submit" class="btn" id="get-location">get location</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  what?</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="mr-auto" id="results">
+            <div class="col-lg mr-0" id="col2">
+              <div class="row">
+                <div class="col-lg">
+                  <div class="wind"></div>
+                </div>
+              </div>
+              <div class="row" id="tempRow">
+                <div class="col-lg" id="col3">
+                  <div class="row">
+                    <div class="temp col"></div>
+                    <div class="city col" id="icon"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="container">
+  <video autoplay loop id="video-background" muted plays-inline>
+  </video>
+
+<!--div class="container"-- deleted fixed-top from mixRow class-->
+  <div class="row fixed-top" id="mixRow">
+      <div class="col-md-12" id="mixCol">
+          <div class="row no-gutters">
+              <div id="player-col" class="col">
+                  <div id="mix-display" class="bg-secondary">
+                      <iframe style="z-index:-2;" width="100%" height="60" id="my-widget-iframe" frameborder="0"></iframe>
+                  </div>
+              </div>
+              <div class="col-auto">
+                  <button class="btn btn-square" id="skipButton">Skip</button>
+              </div>
+          </div>
+          <div id="weatherText"></div>
+      </div>
+  </div>
+<!--/div>
+
+
+<!--   <div class="row fixed-top" id="mixRow">
+  <div class="col-md-12" id="mixCol">
+    <div id="mix-display">
+      <iframe width="50%" height="60" id="my-widget-iframe" frameborder="0"></iframe>
+    </div>
+      <button class="btn-square" id="skipButton">Skip</button>
+      <div id="weatherText"></div>  d-flex align-items-center
+  </div>
+</div> -->
+
+<script type='text/javascript' src='config.js'></script>
+<script src="./app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
