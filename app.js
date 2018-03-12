@@ -13,6 +13,7 @@ var index = 0;
 const alreadyPlayed = [];
 
 //hides the weatherPanel
+//TODO ... are we still using the weather panel??
 $("#weatherPanel").hide();
 $('#mix-display').hide();
 $('#skipButton').hide();
@@ -28,6 +29,7 @@ $(function () {
 //if they don't want to share their location, they can type one in..
 $("#input-location").click(function(event){
     event.preventDefault();
+    $('#what').hide();
     $("#weatherPanel").show();
     $('#mix-display').show();
     $('#skipButton').show();
@@ -44,6 +46,7 @@ $("#input-location").click(function(event){
 
 $('#get-location').click(function(event){
     event.preventDefault();
+    $('#what').hide();
     $("#weatherPanel").show();
     $('#mix-display').show();
     $('#skipButton').show();

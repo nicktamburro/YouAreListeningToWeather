@@ -17,30 +17,9 @@ body{
   padding: 0;
 }
 
-
-
-.modal-backdrop {
-    z-index: -1;
- 
-}
-
-.modal {
-
-   top: -20px;
-
- 
-}
-
-.modalText {
-  color: white;
-}
-
-.modal-title{
-  color: white;
-}
-
-.modal-content{
-   background: rgba(230, 230, 260, 0.9);
+#whatText{
+  color: rgba(260, 260, 260, 0.9);
+  margin-left: 2%;
 }
 
 
