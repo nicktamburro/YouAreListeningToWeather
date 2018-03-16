@@ -20,6 +20,7 @@ body{
 #whatText{
   color: rgba(260, 260, 260, 0.9);
   margin-left: 2%;
+  text-algin: center;
 }
 
 
@@ -299,19 +300,41 @@ h2{
 
 }
 
-/*Iphone X landscape*/
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 812px) 
-and (-webkit-device-pixel-ratio : 3)
-and (orientation : landscape) { 
-
-}
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 /* Styles */
 
+}
+
+/* iPHone X (landscape)
+@media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (orientation : landscape) {
+/* Styles */
+#mixRow{
+  margin-left: 0;
+  padding: 0;
+  margin-top: 23%;
+  height: 60px;
+}
+
+h1, .mainText{
+  margin-top: 0;
+  margin-left: 0;
+  font-size: 350%;
+  font-family: 'Cabin', sans-serif;
+  margin-bottom: 1%;
+}
+
+#weatherText{
+  color: white;
+  font-size: 10pt;
+}
+
+#location {
+  width: 30%;
+  height: 25px;
+  font-size: 100%;
+}
 }
 
 /* iPads (landscape) ----------- */
@@ -320,7 +343,7 @@ and (orientation : landscape) {
 #mixRow{
   margin-left: 0;
   padding: 0;
-  margin-top: 11%;
+  margin-top: 21%;
   height: 60px;
 }
 
@@ -350,7 +373,7 @@ h1, .mainText{
 #mixRow{
   margin-left: 0;
   padding: 0;
-  margin-top: 22%;
+  margin-top: 25%;
   height: 60px;
 }
 
@@ -384,7 +407,7 @@ h1, .mainText{
     #mixRow{
   margin-left: 0;
   padding: 0;
-  margin-top: 12%;
+  margin-top: 23%;
   height: 60px;
 }
 
