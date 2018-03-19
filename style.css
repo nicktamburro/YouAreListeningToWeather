@@ -232,14 +232,13 @@ input {
   border-style: none;
   outline: none;
   height: 40px;
-  font-size: 120%;
+  font-size: 140%;
 }
-
 
 #location {
   width: 30%;
-  height: 25px;
-  font-size: 100%;
+  height: 40px;
+  font-size: 140%;
 }
 
 #weatherText{
@@ -275,8 +274,9 @@ h1, .mainText{
   border-style: none;
   outline: none;
   height: 40px;
-  font-size: 120%;
+  font-size: 140%;
 }
+
 
 h2{
   font-size: 250%;
@@ -285,7 +285,7 @@ h2{
 #location {
   width: 30%;
   height: 40px;
-  font-size: 120%;
+  font-size: 140%;
 }
 
 #weatherText{
@@ -330,10 +330,21 @@ h1, .mainText{
   font-size: 10pt;
 }
 
+.btn{
+  color: white;
+  background: rgba(230, 230, 260, 0.6);
+  border-color: rgba(230, 230, 260, 0.6);
+  border: none;
+  border-style: none;
+  outline: none;
+  height: 40px;
+  font-size: 140%;
+}
+
 #location {
   width: 30%;
-  height: 25px;
-  font-size: 100%;
+  height: 40px;
+  font-size: 140%;
 }
 }
 
@@ -360,10 +371,21 @@ h1, .mainText{
   font-size: 10pt;
 }
 
+.btn{
+  color: white;
+  background: rgba(230, 230, 260, 0.6);
+  border-color: rgba(230, 230, 260, 0.6);
+  border: none;
+  border-style: none;
+  outline: none;
+  height: 40px;
+  font-size: 140%;
+}
+
 #location {
   width: 30%;
-  height: 25px;
-  font-size: 100%;
+  height: 40px;
+  font-size: 140%;
 }
 }
 
@@ -385,10 +407,21 @@ h1, .mainText{
   margin-bottom: 1%;
 }
 
+.btn{
+  color: white;
+  background: rgba(230, 230, 260, 0.6);
+  border-color: rgba(230, 230, 260, 0.6);
+  border: none;
+  border-style: none;
+  outline: none;
+  height: 40px;
+  font-size: 140%;
+}
+
 #location {
   width: 30%;
-  height: 25px;
-  font-size: 100%;
+  height: 40px;
+  font-size: 140%;
 }
 
 #weatherText{
@@ -418,10 +451,22 @@ h1, .mainText{
   font-family: 'Cabin', sans-serif;
   margin-bottom: 1%;
 }
+
+.btn{
+  color: white;
+  background: rgba(230, 230, 260, 0.6);
+  border-color: rgba(230, 230, 260, 0.6);
+  border: none;
+  border-style: none;
+  outline: none;
+  height: 40px;
+  font-size: 140%;
+}
+
 #location {
   width: 30%;
-  height: 25px;
-  font-size: 100%;
+  height: 40px;
+  font-size: 140%;
 }
 
 #weatherText{
