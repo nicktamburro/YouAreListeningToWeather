@@ -19,8 +19,9 @@ body{
 
 #whatText{
   color: rgba(260, 260, 260, 0.9);
-  margin-left: 2%;
-  text-algin: center;
+  text-align: center;
+  font-size: 300%;
+  margin-top: 10%;
 }
 
 
