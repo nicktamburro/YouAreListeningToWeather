@@ -1,29 +1,8 @@
-button{
-  margin-left: 5px;
-}
-
 body{
   margin: 0;
   padding: 0;
   margin-top: 0;
 }
-
-#weatherText{
-  color: white;
-  font-size: 10pt;
-}
-
-#noPad{
-  padding: 0;
-}
-
-#whatText{
-  color: rgba(260, 260, 260, 0.9);
-  text-align: center;
-  font-size: 300%;
-  margin-top: 10%;
-}
-
 
 .btn{
   color: white;
@@ -46,14 +25,45 @@ body{
    box-shadow: none;
 }
 
-#results{
-  max-height: 100px;
-
+button{
+  margin-left: 5px;
 }
 
-/*TODO OKAY, this part is getting weird*/
-#wordColor{
-  color: rgba(260, 260, 260, 0.6);
+.city{
+  padding-left: 0;
+  width: 20%;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 40px;
+  width: 80%;
+}
+
+#enterLocation{
+  height: 150%;
+}
+
+form {
+  margin-top: 10px;
+  height: 100%;
+  margin-left: 0;
+}
+
+h1, .mainText{
+  margin-top: 0;
+  margin-left: 0;
+  font-size: 250%;
+  font-family: 'Cabin', sans-serif;
+  margin-bottom: 1%;
+}
+
+ h1:hover {
+    text-shadow: 2px 2px 8px rgba(230, 230, 260, 0.6);
+}
+
+h2 {
+  margin-top: 1%;
 }
 
 img {
@@ -63,52 +73,15 @@ img {
   margin-left: 0;
 }
 
-.temp{
-  max-width: 20%;
-  height: 10%;
-  padding-right: 0;  
-}
-
-.city{
-  padding-left: 0;
-  width: 20%;
-}
-
-#tempRow{
-  max-height: auto;
-  height: 20%;
-}
-
-#video-background {
-  margin-top: 0;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    background-size: cover;
-    z-index: -100;
-    min-height: 100%;
-    min-width: 100%;
-    background-position: center;
+#location {
+  width: 35%;
+  height: 30px;
+  font-size: 100%;
 }
 
 .mainText{
   color: black;
   text-align: center;
-}
-
-#player-col{
-  max-width: 92%;
-}
-
-nav{
-  margin-bottom: 10%;
-}
-
-#mixRow{
-  margin-left: 0;
-  padding: 0;
-  margin-top: 8%;
-  height: 60px;
 }
 
 #mixCol{
@@ -122,6 +95,44 @@ nav{
   padding: 0;
   width: 100%;
   display: inline-block;
+}
+
+#mixRow{
+  margin-left: 0;
+  padding: 0;
+  margin-top: 8%;
+  height: 60px;
+}
+
+nav{
+  margin-bottom: 10%;
+}
+
+.navbar {
+  background: rgba(260, 260, 260, 0.6);
+  color: white;
+  z-index: 0;
+  padding-bottom: 10px;
+}
+
+#navTitle{
+  margin-left: 0;
+}
+
+#noPad{
+  padding: 0;
+}
+
+.panel{
+  background: rgba(260, 260, 260, 0.2);
+}
+
+#player-col{
+  max-width: 92%;
+}
+
+#results{
+  max-height: 100px;
 }
 
 #skipButton{
@@ -141,59 +152,46 @@ nav{
   box-shadow: none;
   }
 
-
-.container {
-  margin: 0 auto;
-  padding: 40px;
-  width: 80%;
+.temp{
+  max-width: 20%;
+  height: 10%;
+  padding-right: 0;  
 }
 
-.navbar {
-  background: rgba(260, 260, 260, 0.6);
-  color: white;
-  z-index: 0;
-  padding-bottom: 10px;
+#tempRow{
+  max-height: auto;
+  height: 20%;
 }
 
-form {
-  margin-top: 10px;
-  height: 100%;
-  margin-left: 0;
-}
-
-#location {
-  width: 35%;
-  height: 30px;
-  font-size: 100%;
-}
-
-#enterLocation{
-  height: 150%;
-}
-
-h1, .mainText{
+#video-background {
   margin-top: 0;
-  margin-left: 0;
-  font-size: 250%;
-  font-family: 'Cabin', sans-serif;
-  margin-bottom: 1%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    z-index: -100;
+    min-height: 100%;
+    min-width: 100%;
+    background-position: center;
 }
 
- h1:hover {
-    text-shadow: 2px 2px 8px rgba(230, 230, 260, 0.6);
+#weatherText{
+  color: white;
+  font-size: 10pt;
 }
 
-h2 {
-  margin-top: 1%;
+#whatText{
+  color: rgba(260, 260, 260, 0.9);
+  text-align: center;
+  font-size: 300%;
+  margin-top: 10%;
 }
 
-.panel{
-  background: rgba(260, 260, 260, 0.2);
+#wordColor{
+  color: rgba(260, 260, 260, 0.6);
 }
 
-#navTitle{
-  margin-left: 0;
-}
+/*---------------------MEDIA QUERIES----------------------------------*/
 
   /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
