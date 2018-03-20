@@ -7,14 +7,6 @@ $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip(); 
 
 
-
-//I already forgot what this index is for...
-var index = 0;
-const alreadyPlayed = [];
-
-//hides the weatherPanel
-//TODO ... are we still using the weather panel??
-$("#weatherPanel").hide();
 $('#mix-display').hide();
 $('#skipButton').hide();
 
@@ -31,7 +23,6 @@ $(function () {
 $("#input-location").click(function(event){
     event.preventDefault();
     $('#what').hide();
-    $("#weatherPanel").show();
     $('#mix-display').show();
     $('#skipButton').show();
        getWeatherWithUserInput()
@@ -48,7 +39,6 @@ $("#input-location").click(function(event){
 $('#get-location').click(function(event){
     event.preventDefault();
     $('#what').hide();
-    $("#weatherPanel").show();
     $('#mix-display').show();
     $('#skipButton').show();
     getWeatherWithGeo()
