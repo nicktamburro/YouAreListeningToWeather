@@ -27,6 +27,7 @@ $(function () {
 
 //TODO consolidate these functions...
 //if they don't want to share their location, they can type one in..
+//this is  DRY failure
 $("#input-location").click(function(event){
     event.preventDefault();
     $('#what').hide();
