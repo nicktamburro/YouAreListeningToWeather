@@ -71,6 +71,8 @@ function getWeatherWithGeo() {
           var lat = response.location.lat;
           var lon = response.location.lng;
           var weatherLLQueryURL = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=" + WeatherAPIKey;
+
+          //TODO... from here down is exactly the same as the one below... consolidate these
           $.ajax({
               url: weatherLLQueryURL,
               method: "GET"
@@ -88,6 +90,8 @@ function getWeatherWithUserInput() {
   return new Promise(function(resolve, reject) {
    var location = $("#location").val().trim();
    var weatherCSQueryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + location + "&appid=" + WeatherAPIKey;
+
+   //TODO... from here down is exactly the same as function above... consolidate
     $.ajax({
       url: weatherCSQueryURL,
       method: "GET"
