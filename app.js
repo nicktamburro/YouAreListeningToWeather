@@ -6,7 +6,6 @@ const googleQueryURL = "https://www.googleapis.com/geolocation/v1/geolocate?key=
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip(); 
 
-
 $('#mix-display').hide();
 $('#skipButton').hide();
 
@@ -17,45 +16,37 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
-//TODO consolidate these functions...
-//if they don't want to share their location, they can type one in..
-//this is  DRY failure
 $("#input-location").click(function(event){
     event.preventDefault();
-    $('#what').hide();
-    $('#mix-display').show();
-    $('#skipButton').show();
-       getWeatherWithUserInput()
-       .then(function(response) {
-    weatherCode = response;
-    showMix(weatherCode);
+    changeScreen();
     $('#skipButton').click(function(){
       getWeatherWithUserInput();
     });
 });
-});
-
 
 $('#get-location').click(function(event){
     event.preventDefault();
-    $('#what').hide();
-    $('#mix-display').show();
-    $('#skipButton').show();
-    getWeatherWithGeo()
-  .then(function(response) {
-    weatherCode = response;
-    showMix(weatherCode);
+    changeScreen();
     $('#skipButton').click(function(){
       getWeatherWithGeo();
-    })
-    
-});
+    })    
 });
 
 $('#skipButton').click(function(){
   showMix(weatherCode);
 });
 
+//what happens once they click...
+function changeScreen(){
+  $('#what').hide();
+    $('#mix-display').show();
+    $('#skipButton').show();
+    getWeatherWithGeo()
+  .then(function(response) {
+    weatherCode = response;
+    showMix(weatherCode);
+})
+};
 
 //google geolocation
 function getGeoLocationGoogle() {
@@ -71,7 +62,7 @@ function getGeoLocationGoogle() {
         })
     })
 }
- 
+
  //passes the google lat/lon to openweather
 function getWeatherWithGeo() {
   return new Promise(function(resolve,reject) {
@@ -79,7 +70,6 @@ function getWeatherWithGeo() {
       .then(function(response) {
           var lat = response.location.lat;
           var lon = response.location.lng;
-
           var weatherLLQueryURL = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=" + WeatherAPIKey;
           $.ajax({
               url: weatherLLQueryURL,
@@ -92,12 +82,10 @@ function getWeatherWithGeo() {
           });
         })
       })
-
 	}
 
 function getWeatherWithUserInput() {
   return new Promise(function(resolve, reject) {
-
    var location = $("#location").val().trim();
    var weatherCSQueryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + location + "&appid=" + WeatherAPIKey;
     $.ajax({
@@ -168,7 +156,6 @@ const windy = ["https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.m
 
 ];
 
-
 //we pass in the weather codes and pull up mixes
   if (weatherCode > 199 && weatherCode < 233){
     console.log("thunder");
@@ -222,6 +209,5 @@ const windy = ["https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.m
     $(".city").html("<img src='./media/images/sun.svg' data-toggle='tooltip' data-placement='bottom' title='sunny'/>");
   }
 };
-
 });
 
