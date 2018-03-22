@@ -73,6 +73,7 @@ function getWeatherWithGeo() {
           var weatherLLQueryURL = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=" + WeatherAPIKey;
 
           //TODO... from here down is exactly the same as the one below... consolidate these
+          //it actually doesn't like it, the urls are different, could still fix eventually
           $.ajax({
               url: weatherLLQueryURL,
               method: "GET"
