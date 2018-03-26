@@ -1,0 +1,26 @@
+{
+  "name": "youarelisteningtoweather",
+  "version": "1.0.0",
+  "description": "gets location, then weather, then fetches a weather-appropriate playlist",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicktamburro/YouAreListeningToWeather.git"
+  },
+  "keywords": [
+    "music",
+    "weather",
+    "javascript",
+    "geolocation",
+    "mixcloud"
+  ],
+  "author": "nick tamburro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicktamburro/YouAreListeningToWeather/issues"
+  },
+  "homepage": "https://github.com/nicktamburro/YouAreListeningToWeather#readme"
+}
