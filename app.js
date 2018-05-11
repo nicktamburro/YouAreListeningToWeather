@@ -41,6 +41,10 @@ function changeScreen(){
   $('#what').hide();
     $('#mix-display').show();
     $('#skipButton').show();
+    //OKAY, yo!  both functions call changeScreen(), 
+    //which uses getWeatherWithGeo!!! what the fuck!
+
+    //I think I did this to clean up the other functions, but maybe put them back!
     getWeatherWithGeo()
   .then(function(response) {
     weatherCode = response;
