@@ -6,51 +6,57 @@ const googleQueryURL = "https://www.googleapis.com/geolocation/v1/geolocate?key=
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip(); 
 
+//hidden until a result comes back
 $('#mix-display').hide();
 $('#skipButton').hide();
 
-//plays the video background, still need the backgrounds to change with results...
+//plays the video background
 $("#video-background").html('<source id="videoSource" src="./media/video/mainScreen.mp4" type="video/mp4">');
 
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
-
+//function for user search
 $("#input-location").click(function(event){
     event.preventDefault();
-    changeScreen();
+
+    $('#what').hide();
+    $('#mix-display').show();
+    $('#skipButton').show();
+
+    getWeatherWithUserInput()
+  .then(function(response) {
+    weatherCode = response;
+    showMix(weatherCode);
+})
     $('#skipButton').click(function(){
       getWeatherWithUserInput();
     });
 });
 
+//function for geolocation
 $('#get-location').click(function(event){
     event.preventDefault();
-    changeScreen();
-    $('#skipButton').click(function(){
-      getWeatherWithGeo();
-    })    
-});
 
-$('#skipButton').click(function(){
-  showMix(weatherCode);
-});
-
-//what happens once they click...
-function changeScreen(){
-  $('#what').hide();
+    $('#what').hide();
     $('#mix-display').show();
     $('#skipButton').show();
-    //OKAY, yo!  both functions call changeScreen(), 
-    //which uses getWeatherWithGeo!!! what the fuck!
 
-    //I think I did this to clean up the other functions, but maybe put them back!
     getWeatherWithGeo()
   .then(function(response) {
     weatherCode = response;
     showMix(weatherCode);
 })
-};
+
+    $('#skipButton').click(function(){
+      getWeatherWithGeo();
+    })    
+});
+
+
+//skip button just gets a different mix
+//TODO fix it so it can't bring up the same one
+$('#skipButton').click(function(){
+  showMix(weatherCode);
+});
+
 
 //google geolocation
 function getGeoLocationGoogle() {
@@ -77,7 +83,6 @@ function getWeatherWithGeo() {
           var weatherLLQueryURL = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=" + WeatherAPIKey;
 
           //TODO... from here down is exactly the same as the one below... consolidate these
-          //it actually doesn't like it, the urls are different, could still fix eventually
           $.ajax({
               url: weatherLLQueryURL,
               method: "GET"
@@ -109,6 +114,7 @@ function getWeatherWithUserInput() {
     });
   };
 
+//weather codes...
 /*THUNDERSTORM 200 - 232
 Drizzle to light rain 300-500
 Heavy rain 502-531
@@ -120,6 +126,7 @@ Extreme 900-902, 960-962, 781, 762
 Light breeze 951-955
 Heavy wind 956-959*/
 
+//TODO get more mixes!!
 function showMix(weatherCode){
   
   const thunder = ["https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fcarlsoncrusher%2Fstoner-doom-metal-mix-2%2F&hide_cover=1&mini=1&autoplay=1", 
