@@ -3,6 +3,7 @@ var GeolocationAPIKey = config.GeolocationAPIKey;
 //var widget = Mixcloud.PlayerWidget(document.getElementById('my-widget-iframe'));
 const googleQueryURL = "https://www.googleapis.com/geolocation/v1/geolocate?key=" + GeolocationAPIKey;
 
+///am I still using this? 
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip(); 
 
@@ -13,9 +14,13 @@ $('#skipButton').hide();
 //plays the video background
 $("#video-background").html('<source id="videoSource" src="./media/video/mainScreen.mp4" type="video/mp4">');
 
+//TODO: OKAY for some reason the version up on AWS just ignores the input-location option and only returns
+//geolocation info
+
 //function for user search
 $("#input-location").click(function(event){
     event.preventDefault();
+    console.log("first step of input location happened.");
 
     $('#what').hide();
     $('#mix-display').show();
@@ -23,10 +28,12 @@ $("#input-location").click(function(event){
 
     getWeatherWithUserInput()
   .then(function(response) {
+  	console.log("second step of input-location happened.");
     weatherCode = response;
     showMix(weatherCode);
 })
     $('#skipButton').click(function(){
+    	console.log("skip using user-input happened");
       getWeatherWithUserInput();
     });
 });
@@ -157,6 +164,7 @@ const clear = ["https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.m
 const overcast = ["https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fmohhfnzn%2Felliott-smith-acoustic%2F&hide_cover=1&mini=1&autoplay=1",
                   "https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fmanuel-nu%25C3%25B1ez-soto%2Ftotal-from-joy-division-to-new-order%2F&hide_cover=1&mini=1&autoplay=1",
                "https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2FUABCRadio%2Fradio-uni%25C3%25B3n-the-smiths-the-cure-joy-division-y-m%25C3%25A1s%2F&hide_cover=1&mini=1&autoplay=1"];
+
 const extreme = ["https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fblackvintagemilk%2Fnorge-svart-part-1%2F&hide_cover=1&mini=1&autoplay=1",
                 "https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2FMidlandsMetalheads%2Fextreme-metal-mayhem-with-dj-marshbag-27122013%2F&hide_cover=1&mini=1&autoplay=1",
                 "https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2FMidlandsMetalheads%2Fthe-altar-extreme-metal-from-all-genres%2F&hide_cover=1&mini=1&autoplay=1"
