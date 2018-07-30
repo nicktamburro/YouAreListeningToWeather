@@ -18,6 +18,9 @@ $("#video-background").html('<source id="videoSource" src="./media/video/mainScr
 //geolocation info
 
 //function for user search
+
+//we're checking the console, first on the local version,
+//then on the AWS...
 $("#input-location").click(function(event){
     event.preventDefault();
     console.log("first step of input location happened.");
@@ -41,6 +44,7 @@ $("#input-location").click(function(event){
 //function for geolocation
 $('#get-location').click(function(event){
     event.preventDefault();
+    console.log("get-location, first step");
 
     $('#what').hide();
     $('#mix-display').show();
@@ -48,11 +52,13 @@ $('#get-location').click(function(event){
 
     getWeatherWithGeo()
   .then(function(response) {
+  	console.log("get-location, second step");
     weatherCode = response;
     showMix(weatherCode);
 })
 
     $('#skipButton').click(function(){
+    console.log("skip button with get-location");
       getWeatherWithGeo();
     })    
 });
