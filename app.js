@@ -165,6 +165,7 @@ const weird = ["https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.m
 const clear = ["https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fthisisdjames%2Fdjames-west-coast-hip-hop-guest-mix-for-j-fresh%2F&hide_cover=1&mini=1&autoplay=1",
                "https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fdjemilyrawson%2Fa-tribe-called-quest-mini-mix%2F&hide_cover=1&mini=1&autoplay=1",
                "https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fhdif%2Fhdif-podcast-31-belle-sebastian-rebellious-jukebox%2F&hide_cover=1&mini=1&autoplay=1",
+                "https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&autoplay=1&feed=%2Fmaxvibes%2Ften-for-a-sunny-day%2F",
 ];              "https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fmofgimmers%2Ftropicalismo-brazilian-psychedelia-tropicalia-and-more%2F&hide_cover=1&mini=1&autoplay=1"
 
 const overcast = ["https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fmohhfnzn%2Felliott-smith-acoustic%2F&hide_cover=1&mini=1&autoplay=1",
