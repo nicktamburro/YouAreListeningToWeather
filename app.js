@@ -189,52 +189,52 @@ const windy = ["https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.m
 
 //we pass in the weather codes and pull up mixes
   if (weatherCode > 199 && weatherCode < 233){
-    console.log("thunder");
+    //console.log("thunder");
     $('#mix-display').html('<iframe width="100%" height="60" src=' + thunder[Math.floor(Math.random() * thunder.length)] + ' frameborder="0"></iframe>');
     $(".city").html("<img src='./media/images/lightning.svg' data-toggle='tooltip' data-placement='bottom' title='thunder!' />");
 
   } else if (weatherCode > 299 && weatherCode < 501){
-     console.log("rainy");
+     //console.log("rainy");
     $('#mix-display').html('<iframe width="100%" height="60" src=' + lightRain[Math.floor(Math.random() * lightRain.length)] + ' frameborder="0"></iframe>');
     $(".city").html("<img style='margin-left: 20%; margin-top: 2%; height: 50%; width: 50%' src='./media/images/rainwhite.svg' data-toggle='tooltip' data-placement='bottom' title='rainy!'/>");
   
   } else if (weatherCode > 501 && weatherCode < 532){
-     console.log("really rainy");
+     //console.log("really rainy");
     $('#mix-display').html('<iframe width="100%" height="60" src=' + heavyRain[Math.floor(Math.random() * heavyRain.length)] + ' frameborder="0"></iframe>');
     $(".city").html("<img style='margin-left: 20%; margin-top: 2%; height: 50%; width: 50%' src='./media/images/rainwhite.svg' data-toggle='tooltip' data-placement='bottom' title='really rainy!'/>");
 
   } else if (weatherCode > 599 && weatherCode < 623){
-     console.log("snowy");
+     //console.log("snowy");
     $('#mix-display').html('<iframe width="100%" height="60" src=' + snow[Math.floor(Math.random() * snow.length)] + ' frameborder="0"></iframe>');
     $(".city").html("<img src='./media/images/snowflake.svg' data-toggle='tooltip' data-placement='bottom' title='snow!'/>");
 
   } else if (weatherCode > 700 && weatherCode < 762){
-     console.log("weird atmosphere");
+     //console.log("weird atmosphere");
     $('#mix-display').html('<iframe width="100%" height="60"  src=' + weird[Math.floor(Math.random() * weird.length)] + ' frameborder="0"></iframe>');
     $(".city").html("<img src='./media/images/spiral.svg' data-toggle='tooltip' data-placement='bottom' title='weird atmosphere'/>");
   
   } else if (weatherCode > 802 && weatherCode < 805) {
-     console.log("overcast");
+     //console.log("overcast");
     $('#mix-display').html('<iframe width="100%" height="60" src=' + overcast[Math.floor(Math.random() * overcast.length)] + ' frameborder="0"></iframe>');
     $(".city").html("<img src='./media/images/suncloud.svg' data-toggle='tooltip' data-placement='bottom' title='overcast!' />");
     
   } else if (weatherCode > 901 && weatherCode < 903){
-     console.log("extreme");
+     //console.log("extreme");
     $('#mix-display').html('<iframe width="100%" height="60" src=' + extreme[Math.floor(Math.random() * extreme.length)] + ' frameborder="0"></iframe>');
     $(".city").html("<img src='./media/images/tornado.svg' data-toggle='tooltip' data-placement='bottom' title='extreme weather!'/>");
     
   } else if (weatherCode > 950 && weatherCode < 956){
-     console.log("breezy");
+     //console.log("breezy");
     $('#mix-display').html('<iframe width="100%" height="60" src=' + breezy[Math.floor(Math.random() * breezy.length)] + ' frameborder="0"></iframe>');
     $(".city").html("<img src='./media/images/wind.svg' data-toggle='tooltip' data-placement='bottom' title='breezy'/>");
     
   } else if (weatherCode > 955 && weatherCode < 960){
-    console.log("windy");
+    //console.log("windy");
     $('#mix-display').html('<iframe width="100%" height="60" src=' + windy[Math.floor(Math.random() * windy.length)] + ' frameborder="0"></iframe>');
     $(".city").html("<img src='./media/images/wind.svg' data-toggle='tooltip' data-placement='bottom' title='windy'/>");
     
   } else {
-     console.log("clear");
+     //console.log("clear");
     $('#mix-display').html('<iframe width="100%" height="60" src=' + clear[Math.floor(Math.random() * clear.length)] + ' frameborder="0"></iframe>');
     $("#video-background").html('<source id="videoSource" src="./media/video/moving_clouds.mp4" type="video/mp4">');
     $(".city").html("<img src='./media/images/sun.svg' data-toggle='tooltip' data-placement='bottom' title='sunny'/>");
