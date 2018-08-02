@@ -145,6 +145,7 @@ function showMix(weatherCode){
   const thunder = ["https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fcarlsoncrusher%2Fstoner-doom-metal-mix-2%2F&hide_cover=1&mini=1&autoplay=1", 
                  "https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Ffoxtronaut%2Fgits-lau%2F&hide_cover=1&mini=1&autoplay=1",
                  "https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2FElectricBeardOfDoom%2Felectric-beard-of-doom-episode-90%2F&hide_cover=1&mini=1&autoplay=1"
+                 "https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&autoplay=1&feed=%2Fhendrixen%2Fhendrixen-darknstormy-mix%2F"
                   ];
   const lightRain = ["https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fjohncasey1048554%2Ffeat-roy-orbison-harry-dean-stanton-papa-m-dirty-three-jimmie-dale-gilmore-van-morrison%2F&hide_cover=1&mini=1&autoplay=1",
                   "https://www.mixcloud.com/widget/iframe/?feed=https%3A%2F%2Fwww.mixcloud.com%2Fadamkvasnica3%2Fnew-wave-dream-pop-and-ambient%2F&hide_cover=1&mini=1&autoplay=1",
