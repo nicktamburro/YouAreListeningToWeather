@@ -139,6 +139,9 @@ Extreme 900-902, 960-962, 781, 762
 Light breeze 951-955
 Heavy wind 956-959*/
 
+
+//need to double check the latest sunny and thunder mixes, the URL format is different, and
+//myabe that's okay, just make sure.... 
 //TODO get more mixes!!
 function showMix(weatherCode){
   
