@@ -12,6 +12,7 @@ $('#mix-display').hide();
 $('#skipButton').hide();
 
 //plays the video background
+//TODO: alternate backgrounds, maybe not videos? Just switch to nice pictures? 
 $("#video-background").html('<source id="videoSource" src="./media/video/mainScreen.mp4" type="video/mp4">');
 
 //TODO: OKAY for some reason the version up on AWS just ignores the input-location option and only returns
@@ -113,7 +114,7 @@ function getWeatherWithUserInput() {
   return new Promise(function(resolve, reject) {
    var location = $("#location").val().trim();
    var weatherCSQueryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + location + "&appid=" + WeatherAPIKey;
-
+   	console.log(location);
    //TODO... from here down is exactly the same as function above... consolidate
     $.ajax({
       url: weatherCSQueryURL,
