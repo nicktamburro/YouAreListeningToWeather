@@ -24,7 +24,7 @@ $("#video-background").html('<source id="videoSource" src="./media/video/mainScr
 //then on the AWS...
 $("#input-location").click(function(event){
     event.preventDefault();
-    console.log("first step of input location happened.");
+    //console.log("first step of input location happened.");
 
     $('#what').hide();
     $('#mix-display').show();
@@ -32,12 +32,12 @@ $("#input-location").click(function(event){
 
     getWeatherWithUserInput()
   .then(function(response) {
-  	console.log("second step of input-location happened.");
+  	//console.log("second step of input-location happened.");
     weatherCode = response;
     showMix(weatherCode);
 })
     $('#skipButton').click(function(){
-    	console.log("skip using user-input happened");
+    	//console.log("skip using user-input happened");
       getWeatherWithUserInput();
     });
 });
@@ -45,7 +45,7 @@ $("#input-location").click(function(event){
 //function for geolocation
 $('#get-location').click(function(event){
     event.preventDefault();
-    console.log("get-location, first step");
+    //console.log("get-location, first step");
 
     $('#what').hide();
     $('#mix-display').show();
@@ -53,13 +53,13 @@ $('#get-location').click(function(event){
 
     getWeatherWithGeo()
   .then(function(response) {
-  	console.log("get-location, second step");
+  	//console.log("get-location, second step");
     weatherCode = response;
     showMix(weatherCode);
 })
 
     $('#skipButton').click(function(){
-    console.log("skip button with get-location");
+    //console.log("skip button with get-location");
       getWeatherWithGeo();
     })    
 });
@@ -95,7 +95,7 @@ function getWeatherWithGeo() {
           var lat = response.location.lat;
           var lon = response.location.lng;
           var weatherLLQueryURL = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=" + WeatherAPIKey;
-          console.log(lat, lon);
+          //console.log(lat, lon);
           //TODO... from here down is exactly the same as the one below... consolidate these
           $.ajax({
               url: weatherLLQueryURL,
@@ -114,7 +114,7 @@ function getWeatherWithUserInput() {
   return new Promise(function(resolve, reject) {
    var location = $("#location").val().trim();
    var weatherCSQueryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + location + "&appid=" + WeatherAPIKey;
-   	console.log(location);
+   	//console.log(location);
    //TODO... from here down is exactly the same as function above... consolidate
     $.ajax({
       url: weatherCSQueryURL,
