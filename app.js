@@ -43,9 +43,13 @@ $("#input-location").click(function(event){
 });
 
 //function for geolocation
+
+//okay now the get location is failing!
+//so more than ever I need to consolidate the functions...
+//come on, just use an if/else to make the url! okay??
 $('#get-location').click(function(event){
     event.preventDefault();
-    //console.log("get-location, first step");
+    console.log("get-location, first step");
 
     $('#what').hide();
     $('#mix-display').show();
@@ -53,7 +57,7 @@ $('#get-location').click(function(event){
 
     getWeatherWithGeo()
   .then(function(response) {
-  	//console.log("get-location, second step");
+  	console.log("get-location, second step");
     weatherCode = response;
     showMix(weatherCode);
 })
@@ -95,7 +99,7 @@ function getWeatherWithGeo() {
           var lat = response.location.lat;
           var lon = response.location.lng;
           var weatherLLQueryURL = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=" + WeatherAPIKey;
-          //console.log(lat, lon);
+          console.log(lat, lon);
           //TODO... from here down is exactly the same as the one below... consolidate these
           $.ajax({
               url: weatherLLQueryURL,
