@@ -47,7 +47,7 @@ $('#get-location').click(function(event){
 
     getWeatherWithGeo()
   .then(function(response) {
-  	console.log("get-location, second step");
+  	//console.log("get-location, second step");
     weatherCode = response;
     showMix(weatherCode);
 })
@@ -59,7 +59,7 @@ $('#get-location').click(function(event){
 });
 
 
-//skip button just gets a different mix
+//skip button gets a different mix
 //TODO fix it so it can't bring up the same one
 $('#skipButton').click(function(){
   showMix(weatherCode);
