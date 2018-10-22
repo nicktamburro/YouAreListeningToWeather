@@ -2,8 +2,7 @@ var WeatherAPIKey = config.WeatherAPIKey;
 var GeolocationAPIKey = config.GeolocationAPIKey;
 //var widget = Mixcloud.PlayerWidget(document.getElementById('my-widget-iframe'));
 const googleQueryURL = "https://www.googleapis.com/geolocation/v1/geolocate?key=" + GeolocationAPIKey;
-
-///am I still using this? 
+ 
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip(); 
 
@@ -15,16 +14,10 @@ $('#skipButton').hide();
 //TODO: alternate backgrounds, maybe not videos? Just switch to nice pictures? 
 $("#video-background").html('<source id="videoSource" src="./media/video/mainScreen.mp4" type="video/mp4">');
 
-//TODO: OKAY for some reason the version up on AWS just ignores the input-location option and only returns
-//geolocation info
-
 //function for user search
 
-//we're checking the console, first on the local version,
-//then on the AWS...
 $("#input-location").click(function(event){
     event.preventDefault();
-    //console.log("first step of input location happened.");
 
     $('#what').hide();
     $('#mix-display').show();
@@ -32,24 +25,21 @@ $("#input-location").click(function(event){
 
     getWeatherWithUserInput()
   .then(function(response) {
-  	//console.log("second step of input-location happened.");
+ 
     weatherCode = response;
     showMix(weatherCode);
 })
     $('#skipButton').click(function(){
-    	//console.log("skip using user-input happened");
+
       getWeatherWithUserInput();
     });
 });
 
 //function for geolocation
 
-//okay now the get location is failing!
-//so more than ever I need to consolidate the functions...
-//come on, just use an if/else to make the url! okay??
+
 $('#get-location').click(function(event){
     event.preventDefault();
-    console.log("get-location, first step");
 
     $('#what').hide();
     $('#mix-display').show();
@@ -63,7 +53,7 @@ $('#get-location').click(function(event){
 })
 
     $('#skipButton').click(function(){
-    //console.log("skip button with get-location");
+
       getWeatherWithGeo();
     })    
 });
